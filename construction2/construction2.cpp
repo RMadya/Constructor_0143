@@ -3,7 +3,7 @@ using namespace std;
 
 class mahasiswa {
 private:
-	static int nim;
+	static long long int nim;
 public:
 	int id;
 	string nama;
@@ -21,10 +21,31 @@ public:
 	}
 };
 
-int mahasiswa::nim = 0;
+long long int mahasiswa::nim = 20230140143;
 
 void mahasiswa::setID()
 {
 	id = ++nim;
 }
 
+void mahasiswa::printAll() {
+	cout << "ID = " << id << endl;
+	cout << "NAMA = " << nama << endl;
+	cout << endl;
+}
+
+int main() {
+	mahasiswa mhs1("Mhd Bagas P. Rinaldi");
+	mahasiswa mhs2("Jibril");
+	mahasiswa::setNim(11);
+	mahasiswa mhs3("Ridwan");
+	mahasiswa mhs4("Mikail");
+
+	mhs1.printAll();
+	mhs2.printAll();
+	mhs3.printAll();
+	mhs4.printAll();
+
+	cout << "akses dari luar object = " << mahasiswa::getNim() << endl;
+	return 0;
+}
