@@ -1,4 +1,6 @@
 #include <iostream>
 using namespace std;
 
-class mahasiswa 
+class mahasiswa {
+private:
+	static int nim;
